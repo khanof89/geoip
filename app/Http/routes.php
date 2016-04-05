@@ -11,4 +11,8 @@
 |
 */
 
+Route::get('/', function()
+{
+	return 'this is the Ip server';
+});
 Route::get('/{type}/{ip}', 'IndexController@index');
