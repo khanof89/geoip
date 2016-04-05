@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     public function index(Request $request)
     {
-        $ip = str_replace('-', '.',$request->ip);
+        $ip = $request->ip;
         $type = $request->type;
         $location = \GeoIP::getLocation($ip);
         return $location[$type];
